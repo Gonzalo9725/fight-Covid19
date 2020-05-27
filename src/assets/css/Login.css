@@ -4,28 +4,68 @@
     justify-content: center;
     align-items: center;
     height: -webkit-fill-available;
-    background-color: #e9ebee;
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
 }
 
 .login-form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px 50px;
     border-radius: 38px;
     background: #e9ebee;
-    box-shadow:  41px 41px 82px #9a9b9d, 
-                -41px -41px 82px #ffffff;
-    }
+    width: 25em;
+    height: 25em;
+}
+
+.login-form h1{
+    font-size: 2.1rem;
+    margin-bottom: 1em;
+}
 
 .login-form form{
     display: flex;
     flex-direction: column;
-}
-
-.login-form h1{
-    color: #3c9699;
+    align-items: center;
 }
 
 .container-login form input{
+    margin-bottom: 1em;
+    width: 16em;
+    height: 2.3em;
+    border: none;
+    background-color: #e9ebee;
+    border-bottom: 1px solid #3c9699;
+}
+
+.login-form form button{
+    margin-top: 30px;
+}
+
+.google-button{
+    border: none;
+    background-color: #d93025;
+    border-radius: 10px;
+    width: 15em;
+    height: 2.3em;
+    color: white;
+    margin-bottom: 2em;
+    font-size: 18px;
+}
+
+.register-button{
+    border: none;
+    background-color: #3c9699;
+    border-radius: 10px;
+    width: 15em;
+    height: 2.3em;
+    color: white;
     margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.register-link{
+    font-size: 20px;
 }

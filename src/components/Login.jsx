@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { firebase, auth } from '../firebase-config'
-import { useHistory } from 'react-router-dom'
-import logo from '../assets/img/logo.png'
+import { useHistory, Link } from 'react-router-dom'
 import '../assets/css/Login.css'
 
 const Login = () => {
@@ -58,15 +57,10 @@ const Login = () => {
         })
     }
 
-    const signUp = () => {
-        history.push('/register')
-    }
-
     return (
         <div className='container-login'>
-                <img alt="logo" src={logo} /> 
             <div className='login-form'>
-                <h1>Iniciar Sesión</h1>
+                <h1>Fight Covid-19</h1>
                 <form onSubmit={validations}>
                     {
                         error && (
@@ -76,18 +70,20 @@ const Login = () => {
                         )
                     }
                     <input
-                        onChange={(e) => setEmail(e.target.value)} 
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder='Ingresa email...' 
                         type='email'
                         value={email}/>
                     <input 
                         onChange={(e) => setPassword(e.target.value)}
+                        placeholder='Ingresa contraseña'
                         type='password'
                         value={password}/>
 
-                    <button>Entrar</button>
+                    <button className='register-button'>Iniciar Sesión</button>
                 </form>
-                <button onClick={signUp}>Registrate</button>
-                <button onClick={signUpGoogle}>Google</button>
+                <button className='google-button' onClick={signUpGoogle}>Google</button>
+                <Link className='register-link' to="/register">Crea tu cuenta aquí</Link>
             </div>
         </div>
         

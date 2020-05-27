@@ -35,8 +35,9 @@ const Home = () => {
                     <div key={i} className='user-card'>
                         <img src={user.picture.large} alt='health worker'/>
                         <div className='user-info'> 
-                            <p>{user.name.title}. {user.name.first} {user.name.last}, {user.dob.age}</p>
-                            <button onClick={() => handleShow(user)}>Ver Información</button>
+                            <p>Nombre: {user.name.title}. {user.name.first} {user.name.last}</p>
+                            <p>Edad: {user.dob.age}</p>
+                            <button onClick={() => handleShow(user)}>Ver más</button>
                         </div>
                     </div>
                 ))

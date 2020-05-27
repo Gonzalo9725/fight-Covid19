@@ -45,26 +45,30 @@ const Register = () => {
 
     return (
         <div className='container-register'>
-            <h1>Registrate</h1>
-            <form onSubmit={signIn}>
-                {
-                    error && (
-                        <div style={{color:'darkred'}}>
-                            {error}
-                        </div>
-                    )
-                }
-                <input
-                    onChange={(e) => setEmail(e.target.value)} 
-                    type='email'
-                    value={email}/>
-                <input 
-                    onChange={(e) => setPassword(e.target.value)}
-                    type='password'
-                    value={password}/>
+            <div className='register-form'>
+                <h1>Crear cuenta</h1>
+                <form onSubmit={signIn}>
+                    {
+                        error && (
+                            <div style={{color:'darkred'}}>
+                                {error}
+                            </div>
+                        )
+                    }
+                    <input
+                        onChange={(e) => setEmail(e.target.value)} 
+                        type='email'
+                        placeholder='Ingresa email...' 
+                        value={email}/>
+                    <input 
+                        onChange={(e) => setPassword(e.target.value)}
+                        type='password'
+                        placeholder='Ingresa contraseña'
+                        value={password}/>
 
-                <button>Click</button>
-            </form>
+                    <button className='register-button'>Registrarse</button>
+                </form>
+            </div>
         </div>
     )
 }
