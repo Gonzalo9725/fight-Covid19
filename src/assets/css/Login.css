@@ -4,12 +4,26 @@
     justify-content: center;
     align-items: center;
     height: -webkit-fill-available;
-    background-color: bisque;
+    background-color: #e9ebee;
 }
 
-.container-login form{
+.login-form{
     display: flex;
     flex-direction: column;
+    padding: 20px 50px;
+    border-radius: 38px;
+    background: #e9ebee;
+    box-shadow:  41px 41px 82px #9a9b9d, 
+                -41px -41px 82px #ffffff;
+    }
+
+.login-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h1{
+    color: #3c9699;
 }
 
 .container-login form input{

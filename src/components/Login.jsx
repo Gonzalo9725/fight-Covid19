@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { firebase, auth } from '../firebase-config'
 import { useHistory } from 'react-router-dom'
+import logo from '../assets/img/logo.png'
 import '../assets/css/Login.css'
 
 const Login = () => {
@@ -63,29 +64,33 @@ const Login = () => {
 
     return (
         <div className='container-login'>
-            <h1>Iniciar Sesión</h1>
-            <form onSubmit={validations}>
-                {
-                    error && (
-                        <div style={{color:'darkred'}}>
-                            {error}
-                        </div>
-                    )
-                }
-                <input
-                    onChange={(e) => setEmail(e.target.value)} 
-                    type='email'
-                    value={email}/>
-                <input 
-                    onChange={(e) => setPassword(e.target.value)}
-                    type='password'
-                    value={password}/>
+                <img alt="logo" src={logo} /> 
+            <div className='login-form'>
+                <h1>Iniciar Sesión</h1>
+                <form onSubmit={validations}>
+                    {
+                        error && (
+                            <div style={{color:'darkred'}}>
+                                {error}
+                            </div>
+                        )
+                    }
+                    <input
+                        onChange={(e) => setEmail(e.target.value)} 
+                        type='email'
+                        value={email}/>
+                    <input 
+                        onChange={(e) => setPassword(e.target.value)}
+                        type='password'
+                        value={password}/>
 
-                <button>Entrar</button>
-            </form>
-            <button onClick={signUp}>Registrate</button>
-            <button onClick={signUpGoogle}>Google</button>
+                    <button>Entrar</button>
+                </form>
+                <button onClick={signUp}>Registrate</button>
+                <button onClick={signUpGoogle}>Google</button>
+            </div>
         </div>
+        
     )
 }
 
