@@ -57,6 +57,10 @@ const Login = () => {
         })
     }
 
+    const signUp = () => {
+        history.push('/register')
+    }
+
     return (
         <div className='container-login'>
             <h1>Iniciar Sesión</h1>
@@ -79,6 +83,7 @@ const Login = () => {
 
                 <button>Entrar</button>
             </form>
+            <button onClick={signUp}>Registrate</button>
             <button onClick={signUpGoogle}>Google</button>
         </div>
     )

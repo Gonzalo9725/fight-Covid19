@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { auth } from '../firebase-config'
 import { useHistory } from 'react-router-dom'
+import '../assets/css/Register.css'
 
 const Register = () => {
 
@@ -27,11 +28,8 @@ const Register = () => {
             setError('La contraseña debe contener más de 6 caracteres')
             return
         }
-
         setError(null);
-
         createAccount()
-
     }
 
     const createAccount = async() => {
@@ -46,7 +44,8 @@ const Register = () => {
     }
 
     return (
-        <div>
+        <div className='container-register'>
+            <h1>Registrate</h1>
             <form onSubmit={signIn}>
                 {
                     error && (

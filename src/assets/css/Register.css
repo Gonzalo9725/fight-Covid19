@@ -1,17 +1,18 @@
-.container-login{
+.container-register{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: -webkit-fill-available;
     background-color: bisque;
+
 }
 
-.container-login form{
+.container-register form{
     display: flex;
     flex-direction: column;
 }
 
-.container-login form input{
+.container-register form input{
     margin-bottom: 10px;
 }
