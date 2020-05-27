@@ -1,14 +1,36 @@
-p{
-    background-color: gray;
+.home-page{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.modalBackground{
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out;
+.user-card{
+    display: flex;
+    width: 32%;
+    margin-top: 25px;
 }
 
-.modalShowing-true{
-    opacity: 1;
-    pointer-events: showing;
+.user-card img{
+    width: 180px;
+}
+
+.user-card button{
+    width: 120px;
+    height: 38px;
+    border: none;
+    background-color: #3c9699;
+    font-size: 15px;
+    color: white;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info p {
+    margin-left: 20px;
+    font-size: 21px;
 }

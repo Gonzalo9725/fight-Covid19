@@ -2,15 +2,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #964f4e;
+    background-color: #e9ebee;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-    height: 5em;
+    height: 6em;
     position: fixed;
     width: 100%;
   }
 
-  .photo{
-      width: 60px;
+  .menu{
+      width: 50px;
+  }
+
+  .menuResp{
+    width: 50px;
+    display: none;
+  }
+
+  .logo{
+    margin-left: 22px;
+    width: 120px;
   }
 
   .dropdown {
@@ -45,6 +55,12 @@
   }
   
   @media (max-width: 700px) {
+    .menu{
+      display: none;
+    }
+    .menuResp{
+      display: block;
+    }
     .container-nav p {
       font-size: 23px;
       padding-left: 14px;

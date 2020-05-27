@@ -1,7 +1,9 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { auth } from '../firebase-config'
-import profile from '../assets/img/user.png'
+import menu from '../assets/img/arrow.png'
+import menuResp from '../assets/img/menu-resp.png'
+import logo from '../assets/img/logo.png'
 import '../assets/css/NavBar.css'
 
 const NavBar = () => {
@@ -25,9 +27,10 @@ const NavBar = () => {
     return (
         <>
         <div className='container-nav'> 
-            <h1>navbar</h1> 
+            <img className="logo" alt="logo" src={logo} />
             <div className='dropdown'>
-            <img className="photo" alt="fotoperfil" src={profile} />    
+            <img className="menu" alt="menu" src={menu} />    
+            <img className="menuResp" alt="menu-responsive" src={menuResp} />    
                 <div className='dropdown-content'>
                     <p>Ver mi perfil</p>
                     <p onClick={() => closeSession()} >Cerrar Sesión</p>
