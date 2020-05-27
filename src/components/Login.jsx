@@ -3,9 +3,10 @@ import React from 'react'
 const Login = () => {
     return (
         <div>
-            Login
+            Soy el login
         </div>
     )
 }
 
 export default Login
+

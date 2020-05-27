@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route} from 'react-router-dom'
+import Register from './components/Register'
 import Login from './components/Login'
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <div>
       <BrowserRouter>
         <Switch>
-            <Route exact path='/' component={Login} />
+            <Route exact path='/' component={Register} />
+            <Route path='/login' component={Login} />
         </Switch>
       </BrowserRouter>
     </div>
