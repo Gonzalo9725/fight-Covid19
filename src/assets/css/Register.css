@@ -43,3 +43,35 @@
 .container-register form button{
     margin-top: 2em;
 }
+
+@media (max-width: 500px) {
+
+    .register-form h1{
+        font-size: 1.8rem;
+    }
+
+    .container-register form input{
+        width: 15em;
+        height: 2.2em;
+    }
+
+    .register-form{
+        width: 20em;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .register-form h1{
+        font-size: 1.6rem;
+    }
+
+    .container-register form input{
+        width: 12em;
+        height: 2em;
+    }
+
+    .register-form{
+        width: 17em;
+    }
+}

@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import NavBar from './NavBar'
-import { Modal, Button } from 'react-bootstrap';
 import ModalComponent from './ModalComponent'
 import '../assets/css/Home.css'
 
 const Home = () => {
 
     const [data, setData] = useState([])
-    const [currentUser, setCurrentUser] = useState({name:{}})
+    const [currentUser, setCurrentUser] = useState({
+        name:{},
+        location:{
+            street:{}
+        }
+    })
     const [modalShow, setModalShow] = useState(false);
 
     const handleShow = (user) =>{
@@ -29,7 +33,7 @@ const Home = () => {
         <>
         <NavBar/>
 
-        <div className='home-page' style={{paddingTop: '6em'}}>
+        <div className='home-page'>
             {
                 data.map( (user, i) => (
                     <div key={i} className='user-card'>
@@ -46,8 +50,7 @@ const Home = () => {
         <ModalComponent
             show={modalShow} 
             onHide={() => setModalShow(false)}
-            user={currentUser}
-            title={currentUser.name.first} />
+            user={currentUser}/>
         </>
     )
 }

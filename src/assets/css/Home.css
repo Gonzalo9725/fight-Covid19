@@ -2,29 +2,41 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 8em;
+    background: url("../img/pattern.png");
+    background-attachment: fixed;
 }
 
 .user-card{
     display: flex;
-    width: 35%;
+    width: 42%;
     margin-top: 30px;
-    margin-right: 25px;
-    background-color: #e9ebee;
+    margin-right: 4em;
+    margin-bottom: 2em;
+    background-color: white;
+    border-radius: 20px;
 }
 
 .user-card img{
     width: 180px;
+    border-radius: 10px 0px 0px 10px;
 }
 
 .user-card button{
     width: 120px;
     height: 38px;
-    border: none;
-    background-color: #3c9699;
-    font-size: 15px;
-    color: white;
+    border-style: none;
+    font-size: 20px;
+    background-color: white;
+    color: gray;
     align-self: flex-end;
     margin-right: 20px;
+    border-radius: 10px;
+}
+
+.user-card button:hover{
+    background-color: #3c9699;
+    color: white;
 }
 
 .user-info{
@@ -43,5 +55,9 @@
     .user-card{
         width: 95%;
         margin-right: 0px;
+    }
+
+    .user-info p{
+        font-size: 18px;
     }
 }

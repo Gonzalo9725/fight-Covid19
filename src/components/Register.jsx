@@ -35,11 +35,12 @@ const Register = () => {
     const createAccount = async() => {
         try{
             const res = await auth.createUserWithEmailAndPassword(email, password)
-            console.log(res.user);
             alert('Se ha creado correctamente la cuenta');
-            history.push('/login')
+            history.push('/')
         }catch (error) {
-            console.log('error')
+            if(error.code === 'auth/email-already-in-use'){
+                setError('Email ya esta registrado')
+            }
         }
     }
 

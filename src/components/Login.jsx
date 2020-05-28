@@ -42,6 +42,9 @@ const Login = () => {
             history.push('/home')
         }catch (error) {
             console.log(error)
+            if(error.code === 'auth/wrong-password'){
+                setError('Contraseña incorrecta')
+            }
         }
     }
 
