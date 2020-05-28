@@ -1,14 +1,14 @@
 import React from 'react'
 import { Modal, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faHome, faBuilding, faAddressCard, faGlobeAmericas, faThumbtack, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faHome, faBuilding, faGlobeAmericas, faThumbtack, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import '../assets/css/Modal.css'
 
 const ModalComponent = (props) => {
 
     return (
         <Modal show={props.show} onHide={props.onHide}>
-                <Modal.Header closeButton>
+                <Modal.Header>
                     <Modal.Title>{props.user.name.first} {props.user.name.last}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>

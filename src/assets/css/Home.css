@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 8em;
+    padding-top: 2em;
     background: url("../img/pattern.png");
     background-attachment: fixed;
 }
@@ -10,9 +10,7 @@
 .user-card{
     display: flex;
     width: 42%;
-    margin-top: 30px;
-    margin-right: 4em;
-    margin-bottom: 2em;
+    margin: 2em;
     background-color: white;
     border-radius: 20px;
 }
@@ -55,13 +53,20 @@
     text-align: center;
 }
 
+@media (max-width: 1025px) {
+    .user-card{
+        width: 42%;
+        margin: 1em;
+    }
+
+    .user-info p {
+        font-size: 15px;
+    }
+}
+
 @media (max-width: 700px) {
     .user-card{
         width: 95%;
-        margin-right: 0px;
-    }
-
-    .user-info p{
-        font-size: 18px;
+        margin-right: 1em;
     }
 }

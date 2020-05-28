@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import NavBar from './NavBar'
 import ModalComponent from './ModalComponent'
 import '../assets/css/Home.css'
+import Welcome from './Welcome'
 
 const Home = () => {
 
@@ -32,7 +33,7 @@ const Home = () => {
     return (
         <>
         <NavBar/>
-
+        <Welcome/>
         <div className='home-page'>
             {
                 data.map( (user, i) => (
