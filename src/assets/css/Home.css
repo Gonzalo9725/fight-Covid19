@@ -51,6 +51,10 @@
     font-size: 21px;
 }
 
+.home-page h2{
+    text-align: center;
+}
+
 @media (max-width: 700px) {
     .user-card{
         width: 95%;

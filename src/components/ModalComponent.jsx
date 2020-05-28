@@ -9,7 +9,7 @@ const ModalComponent = (props) => {
     return (
         <Modal show={props.show} onHide={props.onHide}>
                 <Modal.Header closeButton>
-                    <Modal.Title><FontAwesomeIcon icon={faAddressCard} /> {props.user.name.first} {props.user.name.last}</Modal.Title>
+                    <Modal.Title>{props.user.name.first} {props.user.name.last}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <p>

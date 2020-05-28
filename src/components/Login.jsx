@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { firebase, auth } from '../firebase-config'
-import { useHistory, Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import '../assets/css/Login.css'
 
 const Login = () => {
@@ -45,6 +45,9 @@ const Login = () => {
             if(error.code === 'auth/wrong-password'){
                 setError('Contraseña incorrecta')
             }
+            else if(error.code === 'auth/user-not-found'){
+                setError('Usuario no existe o Correo está mal escrito')
+            }
         }
     }
 
@@ -73,11 +76,13 @@ const Login = () => {
                         )
                     }
                     <input
+                        id='mail'
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder='Ingresa email...' 
                         type='email'
                         value={email}/>
                     <input 
+                        id='pass'
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder='Ingresa contraseña'
                         type='password'
@@ -86,7 +91,9 @@ const Login = () => {
                     <button className='register-button'>Iniciar Sesión</button>
                 </form>
                 <button className='google-button' onClick={signUpGoogle}>Google</button>
-                <Link className='register-link' to="/register">Crea tu cuenta aquí</Link>
+                <p className='register-link' onClick={() => history.push('/register')}>Crea tu cuenta aquí</p>
+                
+
             </div>
         </div>
         

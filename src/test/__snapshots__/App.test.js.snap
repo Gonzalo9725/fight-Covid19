@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="container-login"
+>
+  <div
+    className="login-form"
+  >
+    <h1>
+      Fight Covid-19
+    </h1>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        id="mail"
+        onChange={[Function]}
+        placeholder="Ingresa email..."
+        type="email"
+        value=""
+      />
+      <input
+        id="pass"
+        onChange={[Function]}
+        placeholder="Ingresa contraseña"
+        type="password"
+        value=""
+      />
+      <button
+        className="register-button"
+      >
+        Iniciar Sesión
+      </button>
+    </form>
+    <button
+      className="google-button"
+      onClick={[Function]}
+    >
+      Google
+    </button>
+    <p
+      className="register-link"
+      onClick={[Function]}
+    >
+      Crea tu cuenta aquí
+    </p>
+  </div>
+</div>
+`;

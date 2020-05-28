@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente Register renders correctly 1`] = `
+<div
+  className="container-register"
+>
+  <div
+    className="register-form"
+  >
+    <h1>
+      Crear cuenta
+    </h1>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        id="mail"
+        onChange={[Function]}
+        placeholder="Ingresa email..."
+        type="email"
+        value=""
+      />
+      <input
+        id="pass"
+        onChange={[Function]}
+        placeholder="Ingresa contraseña"
+        type="password"
+        value=""
+      />
+      <button
+        className="register-button"
+      >
+        Registrarse
+      </button>
+    </form>
+  </div>
+</div>
+`;

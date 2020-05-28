@@ -34,7 +34,7 @@ const Register = () => {
 
     const createAccount = async() => {
         try{
-            const res = await auth.createUserWithEmailAndPassword(email, password)
+            await auth.createUserWithEmailAndPassword(email, password)
             alert('Se ha creado correctamente la cuenta');
             history.push('/')
         }catch (error) {
@@ -57,11 +57,13 @@ const Register = () => {
                         )
                     }
                     <input
+                        id='mail'
                         onChange={(e) => setEmail(e.target.value)} 
                         type='email'
                         placeholder='Ingresa email...' 
                         value={email}/>
                     <input 
+                        id='pass'
                         onChange={(e) => setPassword(e.target.value)}
                         type='password'
                         placeholder='Ingresa contraseña'

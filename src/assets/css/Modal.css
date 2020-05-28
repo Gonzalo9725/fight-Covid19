@@ -1,9 +1,16 @@
 p{
     font-size: 22px;
+    color: #616161;
 }
 
 .h4{
+    font-weight: 400;
     font-size: 30px;
+    color: white;
+}
+
+.modal-header{
+    background-color: #389394;
 }
 
 @media (max-width: 500px) {
